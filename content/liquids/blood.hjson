@@ -1,0 +1,6 @@
+name: Blood
+description: Its just blood.
+temperature: 0.4
+viscosity: 0.8
+effect: none
+color: 570400

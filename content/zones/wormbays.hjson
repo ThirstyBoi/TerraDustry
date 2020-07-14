@@ -1,0 +1,26 @@
+name: Worm Bay
+description: "Some say [red]unimaginable beings[] roam these lands. Gather resources and hold out till launch."
+loadout: basicFoundation
+startingItems: [
+  copper/400
+  lead/400
+  graphite/200
+  titanium/200
+]
+conditionWave: 30
+launchPeriod: 20
+requirements: [
+  {
+    type: ZoneWave
+    zone: groundZero
+    wave: 15
+  }
+]
+resources: [
+  copper
+  lead
+  coal
+  sand
+  titanium
+  thorium
+]

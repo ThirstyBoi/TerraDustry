@@ -1,0 +1,40 @@
+{
+	"localizedName": "Beelzebub",
+	"description": "Feel the power of an RGB keyboard!",
+	"health": 2000,
+	"size": 6,
+	"reload": 240,
+	"coolantMultiplier": 7,
+	"shootCone": 40,
+	"shootDuration": 390,
+	"firingMoveFract": 0.25,
+	"hasPower": true,
+	"hasLiquids": true,
+	"range": 200,
+	"ammoUseEffect": "none",
+	"rotatespeed": 1.9,
+	"recoil": 2,
+	"powerUse": 8.6,
+	"hasPower": true,
+	"targetAir": true,
+	"shootSound": "laser",
+	"activeSound": "rainbow-beam",
+	"activeSoundVolume": 2.3,
+	"heatColor": "ff0000",
+	"consumes": {
+		"liquid": {
+			"liquid": "cryofluid",
+			"update": false,
+			"amount": 0.55
+		}
+	},
+	"requirements": [
+		{ "item": "copper", "amount": 500 },
+		{ "item": "lead", "amount": 420 },
+		{ "item": "silicon", "amount": 320 },
+		{ "item": "titanium", "amount": 350 },
+		{ "item": "thorium", "amount": 150 },
+	],
+	"category": "turret",
+	"research": "swarmer",
+}
