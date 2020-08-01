@@ -1,3 +1,5 @@
+![Logo](logo.png)
+
 # TerraDustry
 
 Adds Terraria onto Mindustry. (yes it's literally just that)
