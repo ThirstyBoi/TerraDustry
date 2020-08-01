@@ -1,0 +1,24 @@
+name: Light Breaker
+description: Mines anything at the speed of light.
+type: Drill
+size: 3
+drawRim: true
+drawMineItem: false
+tier: 4
+warmupSpeed: 0.05
+heatColor: bafff8
+drillTime: 50
+rotateSpeed: 5.3
+drillEffect: lancerLaserCharge
+updateEffect: lightningShoot
+consumes: {
+  power: 90
+}
+requirements: [
+  titanium/420
+  copper/750
+  lead/645
+  phase-fabric/320
+]
+category: production
+research: laser-drill

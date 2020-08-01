@@ -1,6 +1,6 @@
 const rbHitEffect = newEffect(12, e => {
 	Draw.blend(Blending.additive);
-	Draw.color(Color.rgb(Mathf.sinDeg(Time.time()*4)*255,50,50));
+	Draw.color(Color.valueOf("ff0000ff").shiftHue(Time.time() * 4.0));
 	Lines.stroke(e.fout() * 1.5);
 	
 	const hl = new Floatc2({get: function(x, y){
@@ -17,7 +17,7 @@ const rainbowLaserEffect = newEffect(25, e => {
 	const trnsE = new Vec2();
 	
 	trnsE.trns(e.rotation, e.fin() * 70);
-	Draw.color(Color.rgb(Mathf.sinDeg(Time.time()*3)*255,50,50));
+	Draw.color(Color.valueOf("ff5555ff").shiftHue(Time.time() * 2.0), Color.valueOf("ff000000").shiftHue(Time.time() * 2.0), e.fin());
 	//Fill.poly(e.x, e.y, 4, e.fout() * 17, e.rotation);
 	Fill.poly(e.x + trnsE.x, e.y + trnsE.y, 4, e.fout() * 6, e.rotation);
 });
@@ -40,6 +40,8 @@ const rainbowLaser = extend(BasicBulletType, {
 	},
 	
 	draw: function(b){
+		
+		const colors = [Color.valueOf("ff000044"), Color.valueOf("ff000099"), Color.valueOf("ff3333"), Color.valueOf("ffffff")];
 		const tscales = [1.4, 1.0, 0.9, 0.55];
 		const strokes = [1.8, 1.4, 1.04, 0.6];
 		const lenscales = [1.0, 1.16, 1.20, 1.23];
@@ -47,16 +49,11 @@ const rainbowLaser = extend(BasicBulletType, {
 
 		for(var s = 0; s < 4; s++){
 			
-			Draw.color(Color.rgb(Mathf.sinDeg(Time.time()*4)*255,0,0));
+			Draw.color(tmpColor.set(colors[s]).shiftHue((s * 45) + (Time.time() * 2.0)));
 			for(var i = 0; i < 4; i++){
 				Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 1.0) * 20.0);
 				Lines.stroke((3 + Mathf.absin(Time.time() + (10 * s), 1.9, 1.8)) * b.fout() * strokes[s] * tscales[i]);
 				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), 230.0 * b.fout() * lenscales[i], CapStyle.none);
-				Effects.effect(newEffect(1,e=>{
-					Lines.stroke(4);
-					Draw.color("ffffff");
-					Lines.lineAngle(e.x + Tmp.v1.x, e.y + Tmp.v1.y, e.rotation, 230.0 * b.fout() * lenscales[i]-20, CapStyle.none);
-				}),b.x,b.y,b.rot());
 			}
 		};
 		Draw.reset();
@@ -64,7 +61,7 @@ const rainbowLaser = extend(BasicBulletType, {
 });
 
 rainbowLaser.speed = 0.001;
-rainbowLaser.damage = 25;
+rainbowLaser.damage = 20;
 rainbowLaser.lifetime = 13;
 rainbowLaser.hitEffect = rbHitEffect;
 rainbowLaser.despawnEffect = Fx.none;
@@ -92,7 +89,7 @@ const rainbow = extendContent(LaserTurret, "beelzebub",{
 
 		Draw.rect(this.region, tile.drawx() + tr2.x, tile.drawy() + tr2.y, entity.rotation - 90);
 
-		Draw.color(Color.rgb(Mathf.sinDeg(Time.time()*3)*255,50,50));
+		Draw.color(Color.valueOf("ff0000").shiftHue(Time.time() * 2.0));
 		Draw.rect(this.rainbowRegion, tile.drawx() + tr2.x, tile.drawy() + tr2.y, entity.rotation - 90);
 		Draw.color();
 	}

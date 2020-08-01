@@ -1,0 +1,32 @@
+name: Luminosis
+description: Injects beams of light inside lightcrystals.
+liquidCapacity: 69
+size: 3
+hasPower: true
+hasLiquids: true
+hasItems: true
+craftTime: 5
+updateEffect: shockwave
+consumes: {
+  power: 2
+  items: {
+    items: [
+      lightcrys/3
+    ]
+  }
+  liquid: {
+    liquid: cryofluid
+    amount: 0.5
+  }
+}
+requirements: [
+  lead/100
+  silicon/200
+  titanium/100
+  phase-fabric/10
+]
+category: crafting
+research: duo
+idleSound: spark
+idleSoundVolume: 0.5
+outputItem: luminos/1

@@ -1,8 +1,8 @@
 //Script owned by Eye of Darkness
 
-var totalSegments = 9;
+var totalSegments = 19;
 
-var segmentOffset = 52;
+var segmentOffset = 30;
 
 const tempVec = new Vec2();
 const tempVecB = new Vec2();
@@ -997,7 +997,7 @@ const eofUnitTail = extendContent(UnitType, "eof-tail", {
 	},
 	
 	getPowerCellRegion(){
-	  return Core.atlas.find("clear");
+	  return Core.atlas.find("overdriven-none");
 	}
 });
 
@@ -1009,7 +1009,7 @@ eofUnitTail.engineOffset = 0;
 eofUnitTail.flying = true;
 eofUnitTail.rotateWeapon = true;
 eofUnitTail.shootCone = 360;
-eofUnitTail.health = 6000;
+eofUnitTail.health = 500;
 eofUnitTail.mass = 11;
 eofUnitTail.hitsize = segmentOffset / 1.5;
 eofUnitTail.speed = 0;
@@ -1040,7 +1040,7 @@ const eofUnitSegment = extendContent(UnitType, "eof-segment", {
 	},
 	
 	getPowerCellRegion(){
-	  return Core.atlas.find("clear");
+	  return Core.atlas.find("overdriven-none");
 	}
 });
 
@@ -1052,7 +1052,7 @@ eofUnitSegment.engineOffset = 0;
 eofUnitSegment.flying = true;
 eofUnitSegment.rotateWeapon = true;
 eofUnitSegment.shootCone = 360;
-eofUnitSegment.health = 6000;
+eofUnitSegment.health = 2000;
 eofUnitSegment.mass = 11;
 eofUnitSegment.hitsize = segmentOffset / 1.5;
 eofUnitSegment.speed = 0;
@@ -1069,7 +1069,7 @@ const eofUnit = extendContent(UnitType, "eof", {
 	},
 	
 	getPowerCellRegion(){
-	  return Core.atlas.find("clear");
+	  return Core.atlas.find("overdriven-none");
 	},
 	
 	displayInfo(table){
@@ -1112,7 +1112,7 @@ eofUnit.weapon = eofHeadWeap;
 eofUnit.engineSize = 0;
 eofUnit.engineOffset = 0;
 eofUnit.flying = true;
-eofUnit.health = 6000;
+eofUnit.health = 2000;
 eofUnit.mass = 11;
 eofUnit.hitsize = segmentOffset / 1.5;
 eofUnit.speed = 0.34;
