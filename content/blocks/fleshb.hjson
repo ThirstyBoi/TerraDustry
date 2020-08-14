@@ -1,9 +1,0 @@
-type: Wall
-name: Flesh Block
-description: smells like rotten flesh.
-health: 5
-requirements:[
-	copper/69
-]
-category: defense
-research: duo
