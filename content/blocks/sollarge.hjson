@@ -1,0 +1,26 @@
+type: ForceProjector
+name: Large Solar Wall
+description: solarwall.
+health: 4000
+size: 2
+phaseUseTime: 3
+phaseRadiusBoost: 51.7
+radius: 50
+breakage: 20000
+cooldownNormal: 0.25
+cooldownLiquid: 0.05
+cooldownBrokenBase: 0.10
+basePowerDraw: 0.3
+consumes: {
+	items: {
+		items: [
+		phase-fabric/1
+	]}
+}
+
+requirements: [
+  copper/10000
+]
+
+category: defense
+research: overdriven-solsmall

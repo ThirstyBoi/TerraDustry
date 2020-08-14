@@ -1,0 +1,26 @@
+type: ForceProjector
+name: Solar Wall
+description: solarwall.
+health: 2000
+size: 1
+phaseUseTime: 3
+phaseRadiusBoost: 81.7
+radius: 20
+breakage: 10000
+cooldownNormal: 0.5
+cooldownLiquid: 0.2
+cooldownBrokenBase: 0.10
+basePowerDraw: 0.2
+consumes: {
+	items: {
+		items: [
+		phase-fabric/1
+	]}
+}
+
+requirements: [
+  copper/8000
+]
+
+category: defense
+research: titanium-wall

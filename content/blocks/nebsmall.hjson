@@ -1,0 +1,20 @@
+type: MendProjector
+name: Nebula Wall
+description: solarwall.
+health: 500
+size: 1
+color: ffb7ed
+phase: ff00be
+reload: 20
+range: 5
+healPercent: 2
+phaseBosst: 9
+phaseRangeBoost: 5
+useTime: 20
+
+requirements: [
+  copper/2500
+]
+
+category: defense
+research: copper-wall
