@@ -1,0 +1,22 @@
+{
+	"name":"Spazmatism Factory",
+	"size":8,
+	"consumes": {
+		"power": 5,
+		"items": {
+			"items": [
+				silicon/200,
+				blast-compound/100,
+				pyratite/75
+			]
+		}
+	}
+	"category": "units",
+	"research": "duo",
+	"requirements": [
+		lead/200,
+		plastanium/150,
+		silicon/200,
+		titanium/75
+	]
+}

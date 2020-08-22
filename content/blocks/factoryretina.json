@@ -1,0 +1,21 @@
+{
+	"name":"Retinazer Factory",
+	"size":8,
+	"consumes": {
+		"power": 5,
+		"items": {
+			"items": [
+				silicon/200,
+				plastanium/170
+			]
+		}
+	}
+	"category": "units",
+	"research": "duo",
+	"requirements": [
+		lead/200,
+		plastanium/150,
+		silicon/200,
+		titanium/75
+	]
+}
