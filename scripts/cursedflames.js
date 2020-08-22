@@ -231,3 +231,7 @@ spazmatism.create(prov(() => {
 	unit.setChargeTarget(null);
     return unit;
 }));
+
+const factorys = extendContent(UnitFactory, "factoryspaz", {});
+factorys.description = "Make your very own portable giant flying flamethrower";
+factorys.unitType = spazmatism;

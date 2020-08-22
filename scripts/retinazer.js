@@ -186,3 +186,7 @@ retinazer.create(prov(() => {
 	unit.setChargeTarget(null);
     return unit;
 }));
+
+const factoryr = extendContent(UnitFactory, "factoryretina", {});
+factoryr.description = "Make your very own portable giant flying gun";
+factoryr.unitType = retinazer;
